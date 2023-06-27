@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Portfolio </title>
+        <link rel="stylesheet" href="style1.css">
+        <script src="https://kit.fontawesome.com/70637eac2a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1 class="size"><span>M</span>K<span>T</span></h1>
+                    <ul id="sidemenu">
+                        <li><a href="#header"  style="font-size:22px"> Home </a></li>
+                        <li><a href="#about"  style="font-size:22px"> About </a></li>
+                        <li><a href="#projects" style="font-size:22px">Projects </a></li>
+                        <li><a href="#contact" style="font-size:22px">Contact </a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <h1> Hello Everyone!!! <br><br> I'm <span>Mudunuri Keerthi Tejaswi</span></h1><br><br>
+                    <h4> I'm an Enthusiastic Engineering student <br> with basic knowledge in coding and design</h4>
+                </div> 
+            </div>
+        </div>
+                <!-- About -->
+                <hr>
+                <div id="about">
+                    <div class="container">
+                        <h1 class="sub-title" style="text-align: center"> About Me</h1> <br>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Education')"><b>Education</b></p>
+                            <p class="tab-links" onclick="opentab('Skills')"><b>Skills</b></p>
+                            <p class="tab-links" onclick="opentab('Experience')"><b>Experience</b></p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Education">
+                            <ul>
+                                <li><span><b>2020-2024</b></span><br> Andhra University College <br>of Engineering for women</li>
+                                <li><span><b>2018-2020</b></span><br> Sri Chaitanya Junior college</li>
+                                <li><span><b>2018</b></span><br>Sri Chaitanya school</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Skills">
+                            <ul>
+                                <li>Html</li>
+                                <li>Css</li>
+                                <li>JavaScript</li>
+                                <li> C </li>
+                                <li> Java Fundamentals</li>
+                                <li> Python Fundamentals</li>
+                                <li> RDBMS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span><b>Sep2022 to Dec2022</b></span><br> Fsd Internship at I&T Labs</li>
+                                <li><span><b>Apr2022 to July 2022</b></span><br>Internship at Atelia Software</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                       <!-- Projects -->
+                       <hr>
+                       <br> <br>
+                       <div id="projects">
+                           <div class="container">
+                              <h1 class="sub-title" style="text-align: center">My Projects </h1><br>
+                              <div class="project-list">
+                                <div class="project">
+                                    <img src="aucew1.png"><br>
+                                    <div class="data">
+                                        <h3 style="color:rgb(245, 64, 64)"> Aucew Website(front-end) </h3><br>
+                                         <p>It is a website that helps people to get detailed information about
+                                            Andhra University College Of Engineering For Women like about 
+                                            Admissions,Courses Offered and many more.Html,Css,JavaScript are used as frontend.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <img src="Blog.png"><br>
+                                    <div class="data">
+                                    <h3 style="color:rgb(245, 64, 64)"> Blog </h3><br>
+                                    <p> It is a blog created using Python as backend and Html,Css,JavaScript as frontend
+                                        which allows me to create posts and make announcements.
+                                    </p>
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                           </div>
+                       </div>
+                       <!-- contact -->
+                       <hr>
+                       <br><br><br>
+                       <div id="contact">
+                        <div class="container">
+                            <div class="row">
+                                <div class="contact-left">
+                                    <h1 class="sub-title" style="text-align: center">Contact Me</h1>
+                                    <p><i class="fa-solid fa-paper-plane" style="color:rgb(245, 64, 64)"></i><b>contact@gmail.com</b></p><br>
+                                    <p><i class="fa-solid fa-phone"style="color:rgb(245, 64, 64)"></i><b>xxxxxxxxxx</b></p>
+                                    <div class="social-icons">
+                                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <div class="contact-right">
+                                   <form name="submit-to-google-sheet">
+                                        <input type="text" name="Name" placeholder="Your Name" required>
+                                        <input type="email" name="Email" placeholder="Your Email" required>
+                                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea><br>
+                                        <button type="submit" class="btn btn2" style="text-align: center">Submit</button>
+                                    </form>
+                                    <span id="msg"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <p><b>Copyright © MKT.</b></p>
+                        </div>
+                       </div>
+
+                    
+        <script> 
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        } 
+        </script>
+        <script>
+            var sidemenu=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="-400px"
+            }
+        </script>
+        <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwD655OHluhjcoDlkjy-V7ST2OWPZsW9wwV9dqvLe4iXODS06j3KiDm14ayeOv_bxw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                   msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+        
+    </body>
+</html>
